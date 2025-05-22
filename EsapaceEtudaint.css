@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans&display=swap');
+
+:root {
+    --clr-primary: #49a6e9;
+    --clr-secondary: #3fd0d4;
+    --clr-white: #ffffff;
+    --clr-light: #f1f5f8;
+    --clr-dark: #222;
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-danger: hsl(360, 67%, 44%);
+    --transition: all 0.3s ease-in-out;
+    --radius: 0.5rem;
+    --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.header {
+    background: #063251;
+    color: var(--clr-white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logout-btn {
+    background: var(--clr-danger);
+    color: var(--clr-white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background: hsl(360, 71%, 66%);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.profile-card {
+    background: var(--clr-white);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-light);
+    text-align: center;
+    border-top: 4px solid #063251;
+}
+
+.profile-card h2 {
+    margin-bottom: 1rem;
+    color: var(--clr-primary);
+}
+
+.content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card {
+    background: var(--clr-white);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-light);
+    border-left: 4px solid var(--clr-primary);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--clr-primary);
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+    color: var(--clr-grey-5);
+}
+
+.card form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card label {
+    font-weight: bold;
+    color: #063251;
+}
+
+.card select,
+.card textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--clr-grey-8);
+    border-radius: var(--radius);
+    font-size: 1rem;
+}
+
+.card button {
+    background: var(--clr-primary);
+    color: var(--clr-white);
+    padding: 0.75rem;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card button:hover {
+    background: var(--clr-secondary);
+}
+
+.action-message {
+    color: var(--clr-green-dark);
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        flex-direction: row;
+    }
+
+    .profile-card {
+        flex: 0 0 30%;
+    }
+
+    .content-column {
+        flex: 1;
+    }
+}
